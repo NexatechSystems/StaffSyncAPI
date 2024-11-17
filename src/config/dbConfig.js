@@ -10,6 +10,8 @@ const dbConfig = {
     encrypt: true, // Use this if you're connecting to Azure
     enableArithAbort: true,
   },
+  connectionTimeout: 30000, // Increase to 30 seconds
+  requestTimeout: 30000,
 };
 
 const poolPromise = new sql.ConnectionPool(dbConfig)
